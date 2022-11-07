@@ -83,7 +83,7 @@ export const ContactsForm = () => {
           htmlFor={numberId}
           label="Number"
           variant="outlined"
-          type="text"
+          type="tel"
           name="number"
           value={number}
           onChange={onChangeForm}
