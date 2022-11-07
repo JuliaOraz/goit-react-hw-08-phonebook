@@ -7,3 +7,4 @@ export const toastSuccess = name =>
 export const toastWarn = name => toast.warn(`"${name}" is already in contacts`);
 
 export const toastInfo = name => toast.info(`"${name}" deleted`);
+export const toastError = () => toast.error(`Please try again`);
