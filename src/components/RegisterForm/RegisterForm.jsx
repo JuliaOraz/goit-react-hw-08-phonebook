@@ -50,10 +50,14 @@ export default function RegisterForm() {
           name="name"
           value={name}
           onChange={handleChange}
-          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
-          autoComplete="off"
+          inputProps={{
+            autoComplete: 'off',
+            pattern:
+              "^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$",
+            title:
+              "Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan",
+          }}
           sx={{
             mb: 2,
           }}
@@ -66,10 +70,12 @@ export default function RegisterForm() {
           name="email"
           value={email}
           onChange={handleChange}
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}"
-          title="Enter a valid value for the field"
           required
-          autoComplete="off"
+          inputProps={{
+            autoComplete: 'off',
+            pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}',
+            title: 'Enter a valid value for the field',
+          }}
           sx={{
             mb: 2,
           }}
@@ -82,10 +88,13 @@ export default function RegisterForm() {
           name="password"
           value={password}
           onChange={handleChange}
-          pattern="(?=.*\d)(?=.*[a-z]).{7,}"
-          title="Must contain at least one number and at least 7 or more characters"
           required
-          autoComplete="off"
+          inputProps={{
+            autoComplete: 'off',
+            pattern: '(?=.*\\d)(?=.*[a-z]).{7,}',
+            title:
+              'Must contain at least one number and at least 7 or more characters',
+          }}
           sx={{
             mb: 2,
           }}

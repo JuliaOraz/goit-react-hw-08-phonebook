@@ -47,7 +47,10 @@ export default function LoginForm() {
           value={email}
           onChange={handleChange}
           required
-          autoComplete="off"
+          inputProps={{
+            pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}',
+            title: 'Enter a valid value for the field',
+          }}
           sx={{
             mb: 2,
           }}
@@ -61,7 +64,11 @@ export default function LoginForm() {
           value={password}
           onChange={handleChange}
           required
-          autoComplete="off"
+          inputProps={{
+            pattern: '(?=.*\\d)(?=.*[a-z]).{7,}',
+            title:
+              'Must contain at least one number and at least 7 or more characters',
+          }}
           sx={{
             mb: 2,
           }}
