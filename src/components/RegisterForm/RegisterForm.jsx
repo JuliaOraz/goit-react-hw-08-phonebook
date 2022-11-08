@@ -51,8 +51,8 @@ export default function RegisterForm() {
           value={name}
           onChange={handleChange}
           required
+          autoComplete="off"
           inputProps={{
-            autoComplete: 'off',
             pattern:
               "^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$",
             title:
@@ -71,8 +71,8 @@ export default function RegisterForm() {
           value={email}
           onChange={handleChange}
           required
+          autoComplete="off"
           inputProps={{
-            autoComplete: 'off',
             pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}',
             title: 'Enter a valid value for the field',
           }}
@@ -89,8 +89,8 @@ export default function RegisterForm() {
           value={password}
           onChange={handleChange}
           required
+          autoComplete="off"
           inputProps={{
-            autoComplete: 'off',
             pattern: '(?=.*\\d)(?=.*[a-z]).{7,}',
             title:
               'Must contain at least one number and at least 7 or more characters',
